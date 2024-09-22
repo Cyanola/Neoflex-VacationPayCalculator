@@ -24,8 +24,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/calculate")
 public class VacationPayController {
-    @Autowired
+
     VacationPayCalculatorService context;
+    /**
+    @param averageSalary средняя зарплата
+     @param vacationDays количество дней отпуска
+     @param vacationDates точные дни отпуска
+     @return отпускные
+     **/
 
     @GetMapping
     public double calculateVacationPay(@RequestParam double averageSalary,
